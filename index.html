@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>GameTech</title>
+	<link rel="stylesheet" href="Style.css" />
+	<link rel="icon" href="img/Imagenes/a41dd39e63294fcaa418788ca9d7962e-removebg-preview.ico" type="image/x-icon">
+
+</head>
+
+<body>
+	<header>
+		<div class="container-hero">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Soporte al cliente</span>
+						<span class="number">245-122-9208</span>
+					</div>
+				</div>
+
+				<div class="container-logo">
+					<i class="fa-solid fa-laptop"></i>
+					<h1 class="logo"><a href="/">GameTech</a></h1>
+				</div>
+
+				<div class="container-user">
+					<i class="fa-solid fa-user"></i>
+					<i class="fa-solid fa-basket-shopping" onclick="toggleCart()"></i>
+					<div class="content-shopping-cart">
+						<span class="text">Carrito</span>
+						<span class="number">(0)</span>
+					</div>
+				</div>
+				<div id="cartModal" class="cart-modal" style="display:none;">
+					<div class="cart-content">
+						<h3>Tu Carrito</h3>
+						<ul id="cartItemsList"></ul>
+						<div class="total">Total: $<span id="cartTotal">0.00</span></div>
+						<button onclick="toggleCart()">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<i class="fa-solid fa-bars"></i> <!-- Ícono de menú -->
+				<ul class="menu">
+					<li><a href="#Inicio"><i class="fa-solid fa-home"></i> Inicio</a></li>
+					<li><a href="#Acerca-de-nosotros"><i class="fa-solid fa-info-circle"></i> Acerca de nosotros</a></li>
+					<li><a href="#mision"><i class="fa-solid fa-bullseye"></i> Misión</a></li>
+					<li><a href="#vision"><i class="fa-solid fa-eye"></i> Visión</a></li>
+					<li><a href="#valores"><i class="fa-solid fa-hand-holding-heart"></i> Valores</a></li>
+					<li><a href="#buscar"><i class="fa-solid fa-search"></i> Buscar</a></li>
+					<li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+					<li><a href="#login"><i class="fa-solid fa-user"></i> Iniciar sesión</a></li>
+					<li><a href="#registro"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropbtn"><i class="fa-solid fa-globe"></i> Idioma</a> <!-- Ícono de idioma -->
+						<div class="dropdown-content">
+							<!-- Aquí podrías agregar las opciones de idioma si las tienes -->
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+	</header>
+	<section class="banner">
+		<div class="content-banner">
+			<p>Laptops a buen precio</p>
+			<h2>100% Nuevas <br />Con garantia</h2>
+			<!--Agregar una animacion aqui -->
+			<a href="#">Comprar ahora</a>
+		</div>
+	</section>
+
+	<main class="main-content">
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="fa-solid fa-plane-up"></i>
+				<div class="feature-content">
+					<span>Envío gratuito a nivel mundial</span>
+					<p>En pedido superior a $150</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-wallet"></i>
+				<div class="feature-content">
+					<span>Contrareembolso</span>
+					<p>100% garantía de devolución de dinero</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-gift"></i>
+				<div class="feature-content">
+					<span>Tarjeta regalo especial</span>
+					<p>Ofrece bonos especiales con regalo</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-headset"></i>
+				<div class="feature-content">
+					<span>Servicio al cliente 24/7</span>
+					<p>LLámenos 24/7 al 245-122-9208</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container top-categories">
+			<div class="container-categories">
+				<div class="card-category category-moca">
+					<p>Laptops de gama Alta</p>
+					<div class="tooltip-container">
+						<span class="tooltip-trigger">Ver más</span>
+						<div class="tooltip-content">Descubre nuestra selección de laptops de alto rendimiento para
+							gaming y aplicaciones profesionales.</div>
+					</div>
+				</div>
+				<div class="card-category category-expreso">
+					<p>Laptops gama Media</p>
+					<div class="tooltip-container">
+						<span class="tooltip-trigger">Ver más</span>
+						<div class="tooltip-content">Ideales para el trabajo diario y el entretenimiento, estas laptops
+							ofrecen un gran equilibrio entre precio y capacidad.</div>
+					</div>
+				</div>
+				<div class="card-category category-capuchino">
+					<p>Laptops baratas</p>
+					<div class="tooltip-container">
+						<span class="tooltip-trigger">Ver más</span>
+						<div class="tooltip-content">Perfectas para estudiantes y usuarios con presupuesto limitado,
+							nuestras laptops más accesibles.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container top-products">
+			<h1 class="heading-1">Productos en Rebaja</h1>
+			
+			<div class="card-feature">
+				<i class="fa-solid fa-headset"></i>
+				<div class="feature-content">
+					<span>Importante</span>
+					<p>Presiona el nombre del producto para las caracteristicas</p>
+				</div>
+			</div>
+			
+			<div class="container-options">
+				<span class="active">Destacados</span>
+				<span>Más recientes</span>
+				<span>Mejores Vendidos</span>
+			</div>
+
+			<div class="container-products">
+
+				<!--Producto 1-->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image.png" alt="Lenovo V14" />
+						<span class="discount">-13%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Lenovo V14" data-price="4,350"
+								onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features1')">Lenovo V14</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features1" style="display:none;">
+							<p>Procesador: AMD Ryzen 3 3250U a 2.6GHz</p>
+							<p>Sistema: Windows 10</p>
+							<p>RAM: 4GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 128GB</p>
+						</div>
+
+						<p class="price">$4,350 <span>$5000</span></p>
+					</div>
+				</div>
+
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy.png" alt="Acer Chromebook 315" />
+						<span class="discount">-20%</span> <!-- Ajuste del descuento si es necesario -->
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="3" data-product-name="Acer Chromebook 315"
+								data-price="3,600" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features3')">Acer Chromebook 315</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features3" style="display:none;">
+							<p>Procesador: INTEL Celeron N4020 a 1,1GHz</p>
+							<p>Sistema: Chrome OS</p>
+							<p>RAM: 4GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: 64GB eSATA </p>
+
+						</div>
+						<p class="price">$3,600 <span>$4,500</span></p>
+					</div>
+				</div>
+
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 2.png" alt="Prixton Netbook Pro" />
+						<span class="discount">-20%</span> <!-- Ajuste del descuento si es necesario -->
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="3" data-product-name="Prixton Netbook Pro"
+								data-price="3.20" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features2')">Prixton Netbook Pro</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features2" style="display:none;">
+							<p>Procesador: INTEL Atom Z8300 a 2,5GHz</p>
+							<p>Sistema: Windows 10</p>
+							<p>RAM: 4GB DDR2 SDRAM</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: 64GB eMMC </p>
+						</div>
+						<p class="price">$4,000 <span>$5000</span></p>
+					</div>
+				</div>
+
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 3.png" alt="Microsoft Surface Laptop Go" />
+						<span class="discount">-25%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Microsoft Surface Laptop Go"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features4')">Microsoft Surface Laptop Go</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features4" style="display:none;">
+							<p>Procesador: INTEL iCore 5 1035 a 1GHz</p>
+							<p>Sistema: Windows 10 Home</p>
+							<p>RAM: 4GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 64GB eMMC</p>
+						</div>
+
+						<p class="price">$3825 <span>$5,100</span></p>
+					</div>
+				</div>
+
+				<!--Producto 5-->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image.png" alt="Lenovo IdealPad 1" />
+						<span class="discount">-20%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Cafe Irish" data-price="4.60"
+								onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features5')">Lenovo V14</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features5" style="display:none;">
+							<p>Procesador: INTEL Celeron N4020 a 2.4GHz</p>
+							<p>Sistema: Windows 10</p>
+							<p>RAM: 4GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 64GB eMMC</p>
+						</div>
+
+						<p class="price">$3,200 <span>$4,000</span></p>
+					</div>
+				</div>
+
+		</section>
+
+		<section class="gallery">
+			<img src="imagen,/image.png" alt="Gallery Img1" class="gallery-img-1" /><img src="imagen,/image copy.png"
+				alt="Gallery Img2" class="gallery-img-2" /><img src="imagen,/image copy 3.png" alt="Gallery Img3"
+				class="gallery-img-3" /><img src="imagen,/image copy 2.png" alt="Gallery Img4"
+				class="gallery-img-4" /><img src="imagen,/image copy 4.png" alt="Gallery Img5" class="gallery-img-5" />
+		</section>
+
+		<section class="container specials">
+			<h1 class="heading-1">Gamma Profesional</h1>
+
+			<div class="container-products">
+
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 5.png" alt="Dell inspiron" />
+						<span class="discount">-13%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Dell inspiron"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features6')">Dell inspiron</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features6" style="display:none;">
+							<p>Procesador: AMD Ryzen 5-3450U a 3.5Ghz</p>
+							<p>Sistema: Windows 10 in S Mode</p>
+							<p>RAM: 8GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 256GB</p>
+						</div>
+
+						<p class="price">$8,635 <span>$10,500</span></p>
+					</div>
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 6.png" alt="Lenovo IdeaPad 3" />
+						<span class="discount">-10%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Lenovo IdeaPad 3"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features7')">Lenovo IdeaPad 3</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features7" style="display:none;">
+							<p>Procesador: AMD Ryzen 5-3450U a 3.5Ghz</p>
+							<p>Sistema: Windows 11</p>
+							<p>RAM: 8GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 256GB</p>
+						</div>
+
+						<p class="price">$14,400 <span>$16,000</span></p>
+					</div>
+				</div>
+
+				<!-- producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 7.png" alt="Acer Aspire 3 A315-58" />
+						<span class="discount">-12%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Acer Aspire 3 A315-58"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features8')">Acer Aspire 3 A315-58</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features8" style="display:none;">
+							<p>Procesador: INTEL iCore 3-1115G4 a 1.7GHz</p>
+							<p>Sistema: Windows 11 Home</p>
+							<p>RAM: 8GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 256GB</p>
+						</div>
+
+						<p class="price">$10,560 <span>$12,000</span></p>
+					</div>
+				</div>
+
+				<!-- producto 4-->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 8.png" alt="Lenovo ThinkPad E15 " />
+						<span class="discount">-21%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Lenovo ThinkPad E15 "
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features9')">Acer Aspire 3 A315-58</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features9" style="display:none;">
+							<p>Procesador: INTEL iCore 5 10210U 4.2GHz</p>
+							<p>Sistema: Windows 10 pro</p>
+							<p>RAM: 8GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 256GB</p>
+						</div>
+
+						<p class="price">$10,665 <span>$13,500</span></p>
+					</div>
+				</div>
+
+				<!-- producto 5 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 9.png" alt="MEDION Akoya S15449" />
+						<span class="discount">-12%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="MEDION Akoya S15449"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features10')">MEDION Akoya S15449</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features10" style="display:none;">
+							<p>Procesador: Intel Core i5-1135G7 a 4.2GHz</p>
+							<p>Sistema: Windows 11 Home</p>
+							<p>RAM: 8GB DDR4</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 512GB</p>
+						</div>
+
+						<p class="price">$12,320 <span>$14,000</span></p>
+					</div>
+				</div>
+
+		</section>
+
+		<!--Gama alta-->
+		<section class="container specials">
+			<h1 class="heading-1">Gamma Gaming</h1>
+
+			<div class="container-products">
+
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 10.png" alt="Lenovo Legion Pro" />
+						<span class="discount">-10%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Lenovo Legion Pro"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+						</div>
+
+						<h3 onclick="toggleFeatures(event, 'features11')">Lenovo Legion Pro</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features11" style="display:none;">
+							<p>Procesador: INTEL Core i9 14900HX a 4.10GHz</p>
+							<p>Sistema: Windows 11 Home </p>
+							<p>RAM: 32 GB DDR5-5600MHz</p>
+							<p>Tarjeta Grafica: NVIDIA GeForce RTX 4090 GPU 16GB GDDR6</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: 2 TB SSD M.2 2280</p>
+						</div>
+
+						<p class="price">$72,000 <span>$80,000</span></p>
+					</div>
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 11.png" alt="MSI Cyborg " />
+						<span class="discount">-10%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="MSI Cyborg " data-price="4.60"
+								onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features12')">MSI Cyborg</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features12" style="display:none;">
+							<p>Procesador: Intel Core i7-12650H 4.10GHz</p>
+							<p>Sistema: Windows 11</p>
+							<p>RAM: 16 GB DDR5-4800 MHz</p>
+							<p>Tarjeta Grafica: NVIDIA GeForce RTX 4060 8GB</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: 1TB PCIe NVMe M.2 SSD</p>
+						</div>
+
+						<p class="price">$36,000 <span>$40,000</span></p>
+					</div>
+				</div>
+
+				<!-- producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 12.png" alt="Asus TUF F15" />
+						<span class="discount">-10%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Asus TUF F15"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features13')">Asus TUF F15</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features13" style="display:none;">
+							<p>Procesador: INTEL Core i7</p>
+							<p>Sistema: Windows 11 Home</p>
+							<p>Tarjeta Grafica: NVIDIA RTX 4070 8GB GDDR6</p>
+							<p>RAM: 64GB DDR4 3200MHz</p>
+							<p>Tipo de conexion: Wifi 6, Bluetooth</p>
+							<p>Almacenamiento: SSD 2TB PCIe</p>
+						</div>
+
+						<p class="price">$39,600 <span>$44,000</span></p>
+					</div>
+				</div>
+
+				<!-- producto 4-->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 13.png" alt="ASUS G614JI-AS94 ROG Strix G16 " />
+						<span class="discount">-5%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1"
+								data-product-name="ASUS G614JI-AS94 ROG Strix G16" data-price="4.60"
+								onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features14')">ASUS G614JI-AS94 ROG Strix G16</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features14" style="display:none;">
+							<p>Procesador: Intel Core i9-13980HX</p>
+							<p>Sistema: Windows 11</p>
+							<p>RAM: 16 GB DDR5-4800 MHz </p>
+							<p>Tarjeta Grafica: NVIDIA GeForce RTX 4070</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 1TB</p>
+						</div>
+
+						<p class="price">$38,000 <span>$40,000</span></p>
+					</div>
+				</div>
+
+				<!-- producto 5 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/Imagenes/Gamabaja/image copy 14.png" alt="Razer Blade 16" />
+						<span class="discount">-8%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+							<span class="add-cart" data-product-id="1" data-product-name="Razer Blade 16"
+								data-price="4.60" onclick="addToCart(this)">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+							<i class="fa-solid fa-star fa-spin"></i>
+						</div>
+						<h3 onclick="toggleFeatures(event, 'features15')">Razer Blade 16</h3>
+						<!-- Div flotante para las características -->
+						<div class="features" id="features15" style="display:none;">
+							<p>Procesador: NTEL CORE I9-14900HX A 5.8GHz</p>
+							<p>Sistema: Windows 11</p>
+							<p>Tarjeta Grafica: NVIDIA RTX 4090 GDDR6</p>
+							<p>RAM: 64GB DDR5 RAM</p>
+							<p>Tipo de conexion: Wifi, Bluetooth</p>
+							<p>Almacenamiento: SSD 4TB</p>
+						</div>
+
+						<p class="price">$114,080 <span>$124,000</span></p>
+					</div>
+				</div>
+
+		</section>
+
+		<section class="container blogs">
+			<h1 class="heading-1">Acerca de nosotros</h1>
+
+			<div class="container-blogs">
+				<div class="card-blog" id="Acerca-de-nosotros">
+					<div class="container-img">
+						<img src="img/Imagenes/parapc/image.png " alt="Imagen Blog 1" />
+					</div>
+					<div class="content-blog" id="mision">
+						<h3></h3>
+						<span>
+							<H2>Mision</H2>
+						</span>
+						<p>
+							Nuestro compromiso es ofrecer a nuestros clientes una experiencia excepcional al adquirir
+							equipos de cómputo, priorizando siempre sus necesidades
+							y proporcionando un servicio de atención al cliente de primera calidad.
+						</p>
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="img/imagenes/parapc/image copy.png" alt="Imagen Blog 2" />
+					</div>
+					<div class="content-blog" id="vision">
+						<h3>Vision</h3>
+						<p>
+							Nos visualizamos como la principal referencia en la industria de la tecnología, siendo
+							reconocidos a nivel nacional
+							e internacional por nuestra excelencia en la atención al cliente, la calidad de nuestros
+							productos y nuestro compromiso con la innovación constante.
+						</p>
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="img/imagenes/parapc/image copy 2.png" alt="Imagen Blog 3" />
+					</div>
+					<div class="content-blog" id="valores">
+						<h3>Valores</h3>
+						<p>
+							Honestidad: Actuar de manera correcta con los clientes y empleados.<br>
+							Calidad: Compromiso con la excelencia en los productos y servicios que ofrece la
+							empresa.<br>
+							Atención al Cliente: Ofrecemos asesoramiento experto y una experiencia de compra fluida y
+							satisfactoria.<br>
+							Innovación: Mantenemos nuestro catálogo actualizado con las últimas tecnologías y
+							características.<br>
+							Transparencia: Transparencia: Nuestra política es clara y transparente en todos los
+							aspectos, desde precios hasta políticas de garantía.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer" id="contacto">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="contact-info">
+					<p class="title-footer">Información de Contacto</p>
+					<ul>
+						<li><i class="fa-brands fa-whatsapp fa-beat-fade" style="color: black"></i> Teléfono: 245-122-92-08</li>
+						<li><i class="fa-regular fa-envelope fa-fade" style="color: black;"></i> Correo: 22cs0013@cdserdan.tecnm.mx
+						</li>
+					</ul>
+				</div>
+	
+				<div class="information">
+					<p class="title-footer">Información</p>
+					<ul>
+						<li><a href="#">Políticas de Privacidad</a></li>
+					</ul>
+				</div>
+	
+				<div class="my-account">
+					<p class="title-footer">Contamos con:</p>
+					<ul>
+						<li><a href="#"><i class="fas fa-hand-holding-usd" style="color: rgb(0, 0, 0);"></i>
+								Reembolsos</a></li>
+						<div class="social-media-icons">
+							<a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-beat-fade" style="color: black;"></i></a>
+							<a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter fa-beat-fade" style="color: black;"></i></a>
+							<a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-spin" style="color: black;"></i></a>
+							<!-- Agrega más iconos de redes sociales según sea necesario -->
+						</div>
+					</ul>
+				</div>
+	
+				<!-- Logo -->
+				<div class="footer-logo">
+					<img src="Imagen,/46c2d2d421ae41fba0125fa0867a82e3-.png" alt="Logo de la empresa" width="120">
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+	<script>
+
+		// Función para agregar un artículo al carrito
+		function addToCart(element) {
+			var productId = element.getAttribute("data-product-id");
+			var productName = element.getAttribute("data-product-name");
+			var price = parseFloat(element.getAttribute("data-price"));
+
+			// Crear el nuevo elemento del carrito
+			var cartItem = document.createElement("li");
+			cartItem.innerHTML = `${productName}: $${price.toFixed(2)}`;
+
+			// Agregar el botón de eliminar
+			var deleteButton = document.createElement("button");
+			deleteButton.innerText = "Eliminar";
+			deleteButton.onclick = function () {
+				cartItem.remove();
+				updateCartTotal();
+			};
+			cartItem.appendChild(deleteButton);
+
+			// Agregar el nuevo elemento al carrito
+			document.getElementById("cartItemsList").appendChild(cartItem);
+
+			// Actualizar el total del carrito
+			updateCartTotal();
+		}
+
+		// Función para actualizar el total del carrito
+		function updateCartTotal() {
+			var cartItems = document.querySelectorAll("#cartItemsList li");
+			var total = 0;
+			cartItems.forEach(function (item) {
+				var priceText = item.innerText.split(":")[1].trim();
+				var itemPrice = parseFloat(priceText.substring(1));
+				total += itemPrice;
+			});
+			document.getElementById("cartTotal").innerText = total.toFixed(2);
+		}
+
+		// Función para mostrar u ocultar el carrito
+		function toggleCart() {
+			var cartModal = document.getElementById("cartModal");
+			if (cartModal.style.display === "none") {
+				cartModal.style.display = "block";
+			} else {
+				cartModal.style.display = "none";
+			}
+		}
+
+		// Función para cerrar el carrito
+		function closeCart() {
+			document.getElementById("cartModal").style.display = "none";
+		}
+
+	</script>
+
+	<!--Esta madre es para el cuadro flotante-->
+	<script>
+
+		function toggleFeatures(event, id) {
+			var element = document.getElementById(id);
+			var isVisible = element.style.display === 'block';
+			// Oculta todos los elementos features primero
+			document.querySelectorAll('.features').forEach(function (el) {
+				el.style.display = 'none';
+			});
+			// Muestra el elemento clickeado si no estaba ya visible
+			if (!isVisible) {
+				element.style.display = 'block';
+			} else {
+				element.style.display = 'none';
+			}
+			event.stopPropagation();
+		}
+
+		document.addEventListener('click', function (e) {
+			// Cierra todos los flotantes si se clickea fuera de ellos
+			if (!e.target.matches('.features, .features *')) {
+				document.querySelectorAll('.features').forEach(function (el) {
+					el.style.display = 'none';
+				});
+			}
+		});
+	</script>
+
+
+</body>
+
+</html>
